@@ -23,6 +23,14 @@ app.use(express.json({ extended: false}));
 
 app.get('/', (req, res) => res.send("Welcome Jeevan Joti Dash"));
 
+if (process.env.NODE_ENV === 'production') {
+    //*Set static folder up in production
+    app.use(express.static('client/build'));
+
+    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
+  }
+
+
 // Use Routes
 app.use('/api/doctors', doctors);
 app.use('/api/authDoctor', authsDoctor);
