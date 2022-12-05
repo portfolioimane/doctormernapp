@@ -1,0 +1,37 @@
+{
+  "name": "doctorappointmentmern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.5",
+    "react-chartjs-2": "^5.0.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.2.0",
+    "request": "^2.88.2",
+    "bootstrap": "^4.5.0",
+    "react-bootstrap": "^1.1.1",
+    "chart.js": "^2.9.3",
+    "react-chartjs-2": "^2.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}
