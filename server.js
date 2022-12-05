@@ -7,6 +7,7 @@ const authsUser = require('./routes/api/authUser');
 const profile = require('./routes/api/profile');
 const appointment = require('./routes/api/appointment');
 var cors = require('cors');
+const path = require("path");
 
 const app = express();
 app.use(cors());
