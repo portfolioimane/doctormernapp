@@ -8,6 +8,7 @@ const profile = require('./routes/api/profile');
 const appointment = require('./routes/api/appointment');
 
 const app = express();
+app.use(cors());
 
 // DB config
 //const db = require('./config/keys').mongoURI;
