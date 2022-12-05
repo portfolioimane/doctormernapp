@@ -9,6 +9,7 @@ import {
     DELETE_ACCOUNT
     
 } from '../actions/types';
+import axios from 'axios';
 
 const initialState = {
     token: localStorage.getItem('token'),
@@ -30,6 +31,7 @@ export default function(state = initialState, action) {
         case REGISTER_DOCTOR_SUCCESS:            
         case LOGIN_DOCTOR_SUCCESS:
             localStorage.setItem('token', payload.token);
+            axios.defaults.headers.common['x-auth-token'] = payload.token;
             return {
                 ...state,
                 ...payload,

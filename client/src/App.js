@@ -26,6 +26,7 @@ import store from './store';
 import { loadUser } from './actions/authUser';
 import { loadDoctor } from './actions/authDoctor';
 import setAuthToken from './utils/setAuthToken';
+import { CookiesProvider } from 'react-cookie';
 
 
 if(localStorage.token) {
@@ -39,6 +40,7 @@ const App = () => {
   }, []);
 
   return (
+    <CookiesProvider>
     <Provider store={store}>
       <Router>
         <Fragment>
@@ -87,6 +89,7 @@ const App = () => {
         </Fragment>
       </Router>
     </Provider>
+    </CookiesProvider>
   );
 }
 
