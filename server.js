@@ -10,11 +10,11 @@ const appointment = require('./routes/api/appointment');
 const app = express();
 
 // DB config
-const db = require('./config/keys').mongoURI;
+//const db = require('./config/keys').mongoURI;
 
 // connect to MongoDB;
 mongoose
-    .connect(db, { useNewUrlParser: true })
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
 
